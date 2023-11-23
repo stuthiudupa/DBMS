@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-gn538MceWf98Nz8b1buHxj3zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+<style>
+  a.nav-link {
+        margin-left: 40px;
+        text-align: left;
+        font-size: 25px;
+        font-family: 'Montserrat', sans-serif;
+      }
+      body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  form {
+    margin: 40px 0;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  svg {
+    padding:0px;
+    margin-bottom: 4px;
+  }
+  h1{
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 360px;
+    margin-left: 20px;
+  }
+  #reddot {
+    color: red;
+  }
+  .form-outline {
+        width: 70%; /* Adjust the width as needed */
+        margin: 0 auto; /* Center the input fields horizontally */
+    }
+
+    .form-outline input {
+        width: 100%; /* Make the input fields 100% width within the form outline */
+        padding: 10px; /* Add padding for spacing */
+    }
+</style>
+</head>
+<body>
+    {% include 'admin_navbar.html' %}
+    <section class="vh-100 bg-image"
+    style="background: #eee;">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px; height: 650px;">
+              <div class="card-body p-5">
+                <h4 class="text-uppercase text-center mb-5">Add New Tour</h4>
+  
+                <form method="POST" class="px-md-2">
+    
+                  <div class="form-outline mb-4">
+                      <input type="text" id="tourname" name="tourname" required placeholder="Tour Name"><br>
+                  </div>
+    
+                  <div class="form-outline mb-4">
+                    <textarea type="text" id="tourdesc" name="tourdesc" rows="4" style="width: 365px;"  placeholder="Description"></textarea>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                      <input type="number" id="price" name="price" required placeholder="Price"><br>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                      <input type="text" id="img" name="img" required placeholder="Image Link"><br>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                      <input type="number" id="duration" name="duration" required placeholder="Duration"><br>
+                  </div>
+  
+              <div class="text-center" style="margin-bottom: 20px; margin-top: 40px;">
+                  <button type="submit" class="btn btn-dark btn-lg mb-1">Add Tour</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html> 

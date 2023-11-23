@@ -1,0 +1,29 @@
+<div class="card mb-3" style="height: 250px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="{{p[4]}}" class="card-img" alt="tour-image" style="height: 250px; width: 420px; object-fit: cover;">
+    </div>
+
+    <div class="col-md-8">
+      <div class="card-body">
+        <h4 class="card-title" style="color: rgb(120, 120, 120); margin-bottom: 4px; font-size: 30px;">{{p[1]}}</h4>
+        
+        <div style="margin-top: 10px; font-size: 18px;">
+          <b>Description:</b> {{p[2]}}
+        </div>
+        <div style="font-size: 20px; margin-top: 10px; margin-bottom: 10px;">
+          <b>Price:</b> Rs.{{p[3]}}
+          <b style="margin-left: 30px;">Duration:</b> {{p[5]}} Days
+        </div>
+          <form method="POST" action="/packages">
+            <div class="d-flex align-items-center">
+          <img width="50" height="50" src="https://img.icons8.com/ios/50/standing-man.png" alt="standing-man"/>
+          <input type="number" name="num_people" id="num_people" class="form-control" min="1" value="1" style="width: 60px; margin-right: 20px;">
+          <input type="hidden" name="tour_id" value="{{ p[0] }}">
+          <button type="submit" class="btn btn-dark btn-lg mb-1">Book</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 100px;">
+  <a href="{{ url_for('index') }}" class="logo me-auto"><img src="https://img.icons8.com/wired/64/FFFFFF/airport.png" alt="" class="img-fluid" style="height: 80px; padding: 14px;"></a>
+  <h1 id="brandname" className="logo me-auto">ExploreEra<span id="reddot">.</span></h1> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+ <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav justify-content-between" style="margin-left: 130px;">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('about') }}">about</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('packages') }}">packages</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('contact') }}">contact us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('login') }}">login</a>
+      </li>
+    </ul>
+  </div>
+</nav>

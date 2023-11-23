@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-gn538MceWf98Nz8b1buHxj3zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+<style>
+  a.nav-link {
+        margin-left: 40px;
+        text-align: left;
+        font-size: 25px;
+        font-family: 'Montserrat', sans-serif;
+      }
+      body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  form {
+    margin: 40px 0;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  svg {
+    padding:0px;
+    margin-bottom: 4px;
+  }
+  h1{
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 360px;
+    margin-left: 20px;
+  }
+  #reddot {
+    color: red;
+  }
+  
+</style>
+</head>
+<body>
+    {% include 'admin_navbar.html' %}
+    <div class="container">
+    <h2 style="margin-top: 80px;">Contact Messages</h2>
+    <table class="table table-bordered" style="margin-bottom: 100px;">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Message</th>
+        </tr>
+        {% for message in messages %}
+            <tr>
+                <td>{{ message[1] }}</td>
+                <td>{{ message[2] }}</td>
+                <td>{{ message[3] }}</td>
+                <td>{{ message[4] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>
