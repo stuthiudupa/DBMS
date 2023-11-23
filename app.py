@@ -12,7 +12,7 @@ bcrypt = Bcrypt(app)
 connection = pymysql.connect(
     host='localhost',
     user='root',
-    password='Stusri@123',
+    password='your-mysql-password',
     database='travel'
 )
 
